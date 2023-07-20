@@ -1,36 +1,82 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  @font-face {
+    font-family: 'Playfair Display', serif;
+    src: url('/fonts/PlayfairDisplay-VariableFont_wght.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Quattrocento', serif;
+    src: url('/fonts/Quattrocento-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+
+  .font-quattrocento {
+    font-family: 'Quattrocento', serif;
+    font-weight: 800;
+  }
+
+  .text-bg-gradient-rainbow{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(55deg,#fa0,#fd66cb 25%,#9f6eff 50%,#0af 75%,#0fa);
+    -webkit-background-clip: text;
+  }
+  .text-bg-gradient-blue_green{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg,#0af 15%,#0fa 40%);
+    -webkit-background-clip: text;
+  }
+  .text-bg-gradient-orange_rose{
+    webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg,#fa0 12%,#f0a 83%);
+    -webkit-background-clip: text;
+  }
+
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #232634;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
 </style>
