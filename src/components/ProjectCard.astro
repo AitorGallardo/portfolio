@@ -1,0 +1,56 @@
+---
+import AngularIcon from "../icons/AngularIcon.astro";
+import CssIcon from "../icons/CssIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import HtmlIcon from "../icons/HtmlIcon.astro";
+import LinkIcon from "../icons/LinkIcon.astro";
+import RxJsIcon from "../icons/RxJsIcon.astro";
+import TypeScriptIcon from "../icons/TypeScriptIcon.astro";
+
+---
+
+<div class='relative max-w-sm rounded-lg shadow group hover:shadow-2xl'>
+  <!-- <a href='#'> -->
+    <img
+      class='card_img rounded-t-lg transition-opacity group-hover:opacity-20'
+      src='/rest-countries-api.png'
+      alt='rest_country_app'
+    />
+  <!-- </a> -->
+  <div class='p-5 transition-opacity group-hover:opacity-20'>
+    <!-- <a href='#'> -->
+      <h5
+        class='mb-2 text-2xl font-bold tracking-tight text-white dark:text-white' 
+      >
+        Noteworthy technology acquisitions 2021
+      </h5>
+    <!-- </a> -->
+    <p class='mb-3 font-normal text-gray-400'>
+      Here are the biggest enterprise technology acquisitions of 2021 so far, in
+      reverse chronological order.
+    </p>
+    <div class="flex gap-3">
+        <HtmlIcon width='22' height='22'/>
+        <CssIcon width='22' height='22'/>
+        <TypeScriptIcon width='22' height='22'/>
+        <AngularIcon width='22' height='22'/>
+        <RxJsIcon width='22' height='22'/>
+    </div>   
+
+  </div>
+  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center gap-6 opacity-0 transition-opacity  group-hover:opacity-100 text-white">
+    <LinkIcon width='38' height='38'/>
+    <GithubIcon width='40' height='40'/>
+  </div>
+</div>
+
+
+<style>
+  .card_img {
+    filter: drop-shadow(0 0 37px rgba(203, 209, 221, 0.12));
+    -webkit-box-reflect: below 2px
+      linear-gradient(transparent, transparent, transparent, #04060f28);
+    transition: 0.4s;
+    border-style: none;
+  }
+</style>

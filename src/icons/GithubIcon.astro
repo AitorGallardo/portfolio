@@ -1,6 +1,11 @@
+---
+const { width = 'auto', height = 'auto' } = Astro.props;
+---
 
 <svg
-  class='h-[36px] w-[36px] transition-colors duration-300 hover:text-[#0fa] cursor-pointer'
+  width={width}
+  height={height}
+  class='transition-colors duration-300 hover:text-[#0fa] cursor-pointer'
   viewBox='0 0 40 39'
   fill='none'
   xmlns='http://www.w3.org/2000/svg'

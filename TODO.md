@@ -1,0 +1,9 @@
+- [x] Poner iconos en timeline
+- [] Adaptar el break del about al md
+- [] Poner height del about en 100% envex de 100vh en md
+- [] Adaptar el break del about al md
+- [] Mirar tamanyo de los titulos en md
+- [] Centrar el grid end md:
+- [x] Change icon component to change size:
+- [x] Change the same but for button color:
+- [] Get icon to go to site:
