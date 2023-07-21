@@ -1,10 +1,114 @@
 ---
-import Project from './ProjectCard.astro';
+import AngularIcon from '../icons/AngularIcon.astro';
+import CssIcon from '../icons/CssIcon.astro';
+import HtmlIcon from '../icons/HtmlIcon.astro';
+import JavaScriptIcon from '../icons/JavaScriptIcon.astro';
+import ReactIcon from '../icons/ReactIcon.astro';
+import RxJsIcon from '../icons/RxJsIcon.astro';
+import ReduxIcon from '../icons/ReduxIcon.astro';
+import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
+import ProjectCard from './ProjectCard.astro';
 ---
 
 <section
-  class='flex items-start justify-center h-full md:h-screen w-screen flex-col xl:flex-row xl:items-center  py-52 px-16 lg:px-28 min-[1680px]:px-80'
+  class='flex flex-col items-start justify-center h-screen md:h-screen w-screen xl:items-center py-52 px-16 lg:px-28 min-[1680px]:px-80'
 >
-<h4 class='font-quattrocento text-3xl md:text-4xl text-white mb-10 max-xl:text-center'>Projects</h4>
-<Project/>
+  <h4
+    class='font-quattrocento text-3xl md:text-4xl text-white mb-10 max-xl:text-center'
+  >
+    Projects
+  </h4>
+  <div
+    class='grid grid-cols-[repeat(auto-fit,_minmax(0,_36px))] xl:grid-cols-[repeat(3,_minmax(0,_1fr))] gap-y-10 gap-x-10 items-center'
+  >
+    <ProjectCard
+      title='Interactive Card Form'
+      description='Component that shows in a credit card the updated form data.'
+      img='/interactive-card.png'
+      siteLink='https://interactive-form-gmaitor.vercel.app/'
+      githubLink='https://github.com/AitorGallardo/Interactive-card-form'
+    >
+      <Fragment slot='tech_icons'>
+        <HtmlIcon width='22' height='22' />
+        <CssIcon width='22' height='22' />
+        <JavaScriptIcon width='22' height='22' />
+        <ReactIcon width='22' height='22' />
+      </Fragment>
+    </ProjectCard>
+
+    <ProjectCard
+      title='Rest Countries'
+      description='Web app that shows countries fetching data from REST Countries API.'
+      img='/rest-countries-api.png'
+      siteLink='https://rest-countries-api-gmaitor.vercel.app/'
+      githubLink='https://github.com/AitorGallardo/Rest-Countries-Api'
+    >
+      <Fragment slot='tech_icons'>
+        <HtmlIcon width='22' height='22' />
+        <CssIcon width='22' height='22' />
+        <TypeScriptIcon width='22' height='22' />
+        <AngularIcon width='22' height='22' />
+        <RxJsIcon width='22' height='22' />
+      </Fragment>
+    </ProjectCard>
+    <ProjectCard
+      title='Drawing Vanilla Js'
+      description='Canvas to draw built with vanilla js.'
+      img='/drawing-app.png'
+      siteLink='https://codepen.io/AitorGallardo/pen/rNKLVmw'
+      githubLink='https://github.com/AitorGallardo/drawing-app-vanillajs'
+    >
+      <Fragment slot='tech_icons'>
+        <HtmlIcon width='22' height='22' />
+        <CssIcon width='22' height='22' />
+        <JavaScriptIcon width='22' height='22' />
+      </Fragment>
+    </ProjectCard>
+
+    <ProjectCard
+      title='Tip Calculator'
+      description='App that splits bills and calculate tips.'
+      img='/tip-calculator.png'
+      siteLink='https://tip-calculator-gmaitor.vercel.app/'
+      githubLink='https://github.com/AitorGallardo/Tip-Calculator'
+    >
+      <Fragment slot='tech_icons'>
+        <HtmlIcon width='22' height='22' />
+        <CssIcon width='22' height='22' />
+        <JavaScriptIcon width='22' height='22' />
+        <ReactIcon width='22' height='22' />
+      </Fragment>
+    </ProjectCard>
+
+    <ProjectCard
+      title='One Piece Tripulation'
+      description='App that display and filter crews from One Piece.'
+      img='/one_piece.png'
+      siteLink='https://onepiece-eastblue-crews.vercel.app/'
+      githubLink='https://github.com/AitorGallardo/onepiece_eastblue_crews'
+    >
+      <Fragment slot='tech_icons'>
+        <HtmlIcon width='22' height='22' />
+        <CssIcon width='22' height='22' />
+        <JavaScriptIcon width='22' height='22' />
+        <ReactIcon width='22' height='22' />
+        <ReduxIcon width='22' height='22' />
+      </Fragment>
+    </ProjectCard>
+
+    <ProjectCard
+      title='Advice Generator'
+      description='App that generate random quotes of advice.'
+      img='/advice-generator.png'
+      siteLink='https://advice-generator-app-gmaitor.vercel.app/'
+      githubLink='https://github.com/AitorGallardo/Advice-generator-app'
+    >
+      <Fragment slot='tech_icons'>
+        <HtmlIcon width='22' height='22' />
+        <CssIcon width='22' height='22' />
+        <JavaScriptIcon width='22' height='22' />
+        <ReactIcon width='22' height='22' />
+      </Fragment>
+    </ProjectCard>
+  </div>
 </section>
