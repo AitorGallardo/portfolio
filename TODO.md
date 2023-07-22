@@ -5,4 +5,11 @@
 - [x] Change icon component to change size:
 - [x] Change the same but for button color:
 - [x] Get icon to go to site:
+
+
+
+
+- [ ] Animaciones al entrar a la web
+- [ ] Efecto de Hover en la imagen + sombra bien o glow
+- [ ] Efecto de Hover estrellas
 - [ ] Mirar text-wrap: balance actualizando el chrome

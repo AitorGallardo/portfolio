@@ -112,3 +112,31 @@ import ProjectCard from './ProjectCard.astro';
     </ProjectCard>
   </div>
 </section>
+
+
+
+<script>
+  const projectCards = document.querySelectorAll('.ProjectCard');
+
+  console.log(projectCards);
+
+const fadeInUpOptions = {
+  threshold: 0.2, // Adjust this threshold value to suit your needs
+};
+
+function fadeInUpAnimation(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fadeInUp'); 
+      observer.unobserve(entry.target); 
+    }
+  });
+}
+
+const fadeInUpObserver = new IntersectionObserver(fadeInUpAnimation, fadeInUpOptions);
+
+projectCards.forEach(card => {
+  fadeInUpObserver.observe(card);
+});
+
+</script>
