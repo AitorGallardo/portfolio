@@ -11,7 +11,7 @@ const { title, description, img,siteLink,githubLink } = Astro.props;
 ---
 
 <div
-  class='ProjectCard flex flex-col relative max-w-[350px] sm:min-w-[320px] sm:max-w-[320px] lg:min-w-[384px] lg:max-w-sm min-h-[375px] max-h-[375px] rounded-lg shadow group hover:shadow-2xl transition-transform duration-300 overflow-hidden'
+  class='ProjectCard flex flex-col relative max-w-[350px] sm:min-w-[320px] sm:max-w-[320px] lg:min-w-[384px] lg:max-w-sm min-h-[375px] max-h-[375px] rounded-lg shadow group hover:shadow-2xl transition-transform duration-300 overflow-hidden drop-glow'
 >
   <!-- <a href='#'> -->
   <img
@@ -59,6 +59,10 @@ const { title, description, img,siteLink,githubLink } = Astro.props;
       linear-gradient(transparent, transparent, transparent, #04060f28);
     transition: 0.4s;
     border-style: none;
+  }
+
+  .drop-glow{
+    filter: drop-shadow(0 0 37px rgba(203, 209, 221, 0.12));
   }
 
   @keyframes fadeInUp {
