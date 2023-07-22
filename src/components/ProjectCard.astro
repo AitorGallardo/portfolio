@@ -11,11 +11,11 @@ const { title, description, img,siteLink,githubLink } = Astro.props;
 ---
 
 <div
-  class='flex flex-col relative max-w-sm min-h-[375px] max-h-[375px] rounded-lg shadow group hover:scale-105 transition-transform duration-300'
+  class='flex flex-col relative max-w-[350px] sm:min-w-[384px] sm:max-w-sm min-h-[375px] max-h-[375px] rounded-lg shadow group hover:shadow-2xl transition-transform duration-300 overflow-hidden'
 >
   <!-- <a href='#'> -->
   <img
-    class='card_img object-cover min-h-[210px] max-h-[210px] w-full rounded-t-lg transition-all group-hover:opacity-20 group-hover:blur-[2px] duration-300'
+    class='card_img object-cover min-h-[210px] max-h-[210px] w-full rounded-t-lg transition-all group-hover:opacity-20 group-hover:blur-[2px] duration-300 group-hover:scale-110'
     src={img}
     src='/rest-countries-api.png'
     alt='rest_country_app'

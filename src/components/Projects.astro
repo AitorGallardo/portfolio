@@ -11,15 +11,15 @@ import ProjectCard from './ProjectCard.astro';
 ---
 
 <section
-  class='flex flex-col items-start justify-center h-screen md:h-screen w-screen xl:items-center py-52 px-16 lg:px-28 min-[1680px]:px-80'
+  class='flex flex-col  h-full xl:items-center px-8 py-24   sm:px-16 lg:px-28 lg:py-52 min-[1680px]:px-80'
 >
   <h4
-    class='font-quattrocento text-3xl md:text-4xl text-white mb-10 max-xl:text-center'
+    class='font-quattrocento text-4xl text-center xl:text-start w-full text-gray-400 mb-14'
   >
     Projects
   </h4>
   <div
-    class='grid grid-cols-[repeat(auto-fit,_minmax(0,_36px))] xl:grid-cols-[repeat(3,_minmax(0,_1fr))] gap-y-10 gap-x-10 items-center'
+    class='grid w-full justify-items-center grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-y-10 gap-x-10'
   >
     <ProjectCard
       title='Interactive Card Form'

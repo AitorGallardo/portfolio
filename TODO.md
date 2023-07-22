@@ -6,4 +6,4 @@
 - [] Centrar el grid end md:
 - [x] Change icon component to change size:
 - [x] Change the same but for button color:
-- [] Get icon to go to site:
+- [x] Get icon to go to site:
