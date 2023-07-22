@@ -29,6 +29,7 @@ import ScrollIcon from '../icons/ScrollIcon.astro';
     </div>
   </div>
   <img
+    id='me-img'
     class='aspect-[484/455] drop-shadow-2xl h-[250px] lg:max-xl:h-[300px] xl:max-2xl:h-[400px] 2xl:h-[450px]'
     src='/me-img.png'
     src='/me-img.png'
@@ -37,4 +38,31 @@ import ScrollIcon from '../icons/ScrollIcon.astro';
   <ScrollIcon />
 </section>
 
+<!-- <style>
+  #me-img {
+    transition: box-shadow 0.1s, transform 0.1s;
+  }
+  #me-img:hover {
+    box-shadow: 0ps 0px 50px rgba(0, 0, 0, 1);
+  }
+</style>
 
+<script>
+  const image = document.querySelector('#me-img') as HTMLElement;
+  const height = image.clientHeight;
+  const width = image.clientWidth;
+
+  image.addEventListener('mousemove', (e) => {
+    const {layerX, layerY} = e;
+
+    const yRotation = ((layerX - width / 2) / width) * 20;
+    const xRotation = ((layerY - height / 2) / height) * 20;
+
+    const string = `perspective(500px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+    image.style.transform = string;
+  });
+
+  image.addEventListener('mouseout', () => {
+    image.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
+  });
+</script> -->
