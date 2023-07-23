@@ -63,17 +63,48 @@ import Stars from './Stars.astro';
   const height = image.clientHeight;
   const width = image.clientWidth;
 
-  image.addEventListener('mousemove', (e) => {
-    const { layerX, layerY } = e;
 
-    const yRotation = ((layerX - width / 2) / width) * 20;
-    const xRotation = ((layerY - height / 2) / height) * 20;
+function isMobileDevice() {
+  return window.innerWidth <= 900; 
+}
+
+if (isMobileDevice()) {
+  image.addEventListener('touchmove', handleTouchMove);
+  image.addEventListener('touchend', handleOutsideMove);
+} else {
+
+  image.addEventListener('mousemove', handleMouseMove);
+
+  image.addEventListener('mouseout', handleOutsideMove);
+}
+
+
+function handleTouchMove(e){
+  const touch = e.touches[0]; // Get the first touch point
+  const rect = image.getBoundingClientRect(); // Get the element's bounding rectangle
+  const touchXRelativeToElement = touch.pageX - rect.left;
+  const touchYRelativeToElement = touch.pageY - rect.top;
+
+    const yRotation = ((touchXRelativeToElement - width / 2) / width) * 20;
+    const xRotation = ((touchYRelativeToElement - height / 2) / height) * 20;
 
     const string = `perspective(500px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
     image.style.transform = string;
-  });
+}
 
-  image.addEventListener('mouseout', () => {
-    image.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
-  });
+function handleMouseMove(e){
+  const { layerX, layerY } = e;
+
+  const yRotation = ((layerX - width / 2) / width) * 20;
+  const xRotation = ((layerY - height / 2) / height) * 20;
+
+  const string = `perspective(500px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+  image.style.transform = string;
+}
+
+function handleOutsideMove(){
+  image.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
+}
+
+
 </script>

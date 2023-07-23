@@ -22,3 +22,5 @@
 - [x] Text balance al header
 - [ ] tootlip en el icons grid
 - [x] cambiar readme
+- [] meter foto en linkedin
+- [] referencia al portfolio en linkeding y CV
