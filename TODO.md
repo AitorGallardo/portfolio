@@ -11,5 +11,5 @@
 
 - [x] Animaciones al entrar a la web
 - [x] Efecto de Hover en la imagen + sombra bien o glow
-- [ ] Efecto de Hover estrellas
+- [x] Efecto de Hover estrellas
 - [ ] Mirar text-wrap: balance actualizando el chrome
