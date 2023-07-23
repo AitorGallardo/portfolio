@@ -6,7 +6,7 @@ import Stars from './Stars.astro';
 ---
 
 <section
-  class='relative flex flex-col gap-20 justify-center md:flex-row md:gap-0 md:justify-between h-screen items-center px-0 md:px-16 lg:px-32 xl:px-48 min-[1680px]:px-80'
+  class='overflow-hidden relative flex flex-col gap-20 justify-center md:flex-row md:gap-0 md:justify-between h-screen items-center px-0 md:px-16 lg:px-32 xl:px-48 min-[1680px]:px-80'
 >
   <div class='flex flex-col items-center md:items-start text-white'>
     <h1 class='font-playfair text-5xl lg:text-6xl 2xl:text-7xl mb-2 md:mb-3'>
@@ -47,12 +47,15 @@ import Stars from './Stars.astro';
   #me-img:hover {
     box-shadow: 0ps 0px 50px rgba(0, 0, 0, 1);
   }
+
+
 </style>
 
 <script>
   const image = document.querySelector('#me-img') as HTMLElement;
   const height = image.clientHeight;
   const width = image.clientWidth;
+
 
   image.addEventListener('mousemove', (e) => {
     const {layerX, layerY} = e;
@@ -67,4 +70,6 @@ import Stars from './Stars.astro';
   image.addEventListener('mouseout', () => {
     image.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
   });
+
+
 </script>

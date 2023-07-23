@@ -1,3 +1,5 @@
+<!-- <span></span> -->
+<!-- <span></span> -->
 <span></span>
 <span></span>
 <span></span>
@@ -8,9 +10,9 @@
 <span></span>
 <span></span>
 <span></span>
-<span></span>
-<span></span>
+
 <style>
+
   span {
     position: absolute;
     top: 50%;
@@ -22,6 +24,7 @@
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
       0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
     animation: animate 3s linear infinite;
+    z-index: -99;
   }
   span::before {
     content: '';
@@ -45,13 +48,20 @@
       opacity: 0;
     }
   }
-  span:nth-child(1) {
+  span:first-child {
     top: 0;
     right: 0;
     left: initial;
     animation-delay: 0;
     animation-duration: 1s;
   }
+  /* span:nth-child(1) {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+  } */
   span:nth-child(2) {
     top: 0;
     right: 80px;

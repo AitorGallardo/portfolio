@@ -8,10 +8,11 @@ import RxJsIcon from '../icons/RxJsIcon.astro';
 import ReduxIcon from '../icons/ReduxIcon.astro';
 import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
 import ProjectCard from './ProjectCard.astro';
+import Stars from './Stars.astro';
 ---
 
 <section
-  class='flex flex-col  h-full xl:items-center px-8 py-24   sm:px-16 lg:px-28 lg:py-52 '
+  class='relative overflow-hidden flex flex-col  h-full xl:items-center px-8 py-24   sm:px-16 lg:px-28 lg:py-52 '
 >
   <h4
     class='font-quattrocento text-4xl text-center xl:text-start w-full text-gray-400 mb-14'
@@ -115,6 +116,8 @@ import ProjectCard from './ProjectCard.astro';
       </Fragment>
     </ProjectCard>
   </div>
+  <Stars/>
+
 </section>
 
 
