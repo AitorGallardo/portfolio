@@ -16,8 +16,8 @@
 - [x] Listart procedimiento de deploy
 - [x] No descarga el CV
 - [x] Dejar posicionado el hover con estrellas, no ensenyar en partes mobile
-- [ ] Deshabilitar movimiento de imagen en mobil
-- [ ] No buttons en projects, ir directo a deployed site
+- [x] Deshabilitar movimiento de imagen en mobil
+- [x] No buttons en projects, ir directo a deployed site
 - [ ] Icono rxjs no se ve en mobile
 - [x] Text balance al header
 - [ ] tootlip en el icons grid
