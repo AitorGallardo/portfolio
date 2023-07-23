@@ -13,12 +13,12 @@ import Stars from './Stars.astro';
   >
     <div class='top_about'>
       <h5
-        class='font-quattrocento text-4xl 2xl:text-4xl mb-4 md:mb-14 text-bg-gradient-orange_rose'
+        class='font-quattrocento text-4xl 2xl:text-4xl mb-4 md:mb-14 text-bg-gradient-orange_rose text-balance'
       >
         Love to build ideas.
       </h5>
       <h4
-        class='font-quattrocento text-5xl 2xl:text-5xl mb-4 md:mb-36 text-bg-gradient-rainbow'
+        class='font-quattrocento text-5xl 2xl:text-5xl mb-4 md:mb-36 text-bg-gradient-rainbow text-balance'
       >
         On my way to learn by doing.
       </h4>
@@ -30,12 +30,12 @@ import Stars from './Stars.astro';
   </div>
   <div class='ElementToAnimate top_about flex flex-col w-full items-center text-center xl:hidden'>
     <h5
-      class='font-quattrocento text-3xl mb-4 text-bg-gradient-orange_rose'
+      class='font-quattrocento text-3xl mb-4 text-bg-gradient-orange_rose text-balance'
     >
       Love to build ideas.
     </h5>
     <h4
-      class='font-quattrocento text-5xl mb-20 text-bg-gradient-rainbow'
+      class='font-quattrocento text-5xl mb-20 text-bg-gradient-rainbow text-balance'
     >
       On my way to learn by doing.
     </h4>
@@ -53,6 +53,9 @@ import Stars from './Stars.astro';
 </section>
 
 <style>
+  .text-balance{
+    text-wrap: balance;
+  }
 
   @keyframes fadeInUp {
   0% {

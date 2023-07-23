@@ -111,9 +111,19 @@ const { title } = Astro.props;
 <script>
   const flashlight = document.querySelector('#flashlight') as HTMLElement;
 
+  function isMobileDevice() {
+  return window.innerWidth <= 900; 
+}
+
+if (isMobileDevice()) {
+    flashlight.style.setProperty('--Ypos', `85vh`);
+} else {
   document.addEventListener('mousemove', (e) => {
     const { pageX, pageY } = e;
     flashlight.style.setProperty('--Xpos', `${pageX}px`);
     flashlight.style.setProperty('--Ypos', `${pageY}px`);
   });
+}
+
+
 </script>

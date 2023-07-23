@@ -14,11 +14,11 @@
 - [x] Efecto de Hover estrellas
 - [x] Mirar text-wrap: balance actualizando el chrome
 - [x] Listart procedimiento de deploy
-- [ ] No descarga el CV
-- [ ] Dejar posicionado el hover con estrellas, no ensenyar en partes mobile
+- [x] No descarga el CV
+- [x] Dejar posicionado el hover con estrellas, no ensenyar en partes mobile
 - [ ] Deshabilitar movimiento de imagen en mobil
 - [ ] No buttons en projects, ir directo a deployed site
 - [ ] Icono rxjs no se ve en mobile
-- [ ] Text balance al header
+- [x] Text balance al header
 - [ ] tootlip en el icons grid
 - [x] cambiar readme
