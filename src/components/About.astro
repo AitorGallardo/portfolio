@@ -1,11 +1,12 @@
 ---
 import Timeline from './Timeline.astro';
 import IconsGrid from './IconsGrid.astro';
+import Stars from './Stars.astro';
 ---
 
 <section
   id="about"
-  class='flex items-start justify-center h-full xl:h-screen  flex-col xl:flex-row xl:items-center  px-8 py-24 sm:px-16 lg:px-28 lg:py-52 min-[1680px]:px-80'
+  class='relative flex items-start justify-center h-full xl:h-screen  flex-col xl:flex-row xl:items-center  px-8 py-24 sm:px-16 lg:px-28 lg:py-52 min-[1680px]:px-80'
 >
   <div
     class='ElementToAnimate left_about_tech flex-col justify-between grow h-full hidden xl:flex'
@@ -48,6 +49,7 @@ import IconsGrid from './IconsGrid.astro';
     <h4 class='font-quattrocento text-4xl text-gray-400 mb-14'>Technologies</h4>
     <IconsGrid />
   </div>
+  <Stars/>
 </section>
 
 <style>
