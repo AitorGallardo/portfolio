@@ -11,7 +11,7 @@ const { title, description, img,siteLink,githubLink } = Astro.props;
 ---
 
 <div
-  class='ProjectCard flex flex-col relative max-w-[350px] sm:min-w-[325px] sm:max-w-[325px] 2xl:min-w-auto 2xl:max-w-sm min-h-[375px] max-h-[375px] rounded-lg shadow group lg:hover:shadow-2xl transition-transform duration-300 overflow-hidden drop-glow'
+  class='ProjectCard flex flex-col relative max-w-[350px] sm:min-w-[325px] sm:max-w-[325px] 2xl:min-w-auto 2xl:max-w-sm min-h-[385px] max-h-[400px] rounded-lg shadow group lg:hover:shadow-2xl transition-transform duration-300 overflow-hidden drop-glow'
 >
 <a href={siteLink} target="_blank">
 
@@ -36,7 +36,7 @@ const { title, description, img,siteLink,githubLink } = Astro.props;
         {title}
       </h5>
 
-      <p class='mb-3 font-normal text-gray-400'>
+      <p class='mb-3 font-normal text-gray-400 max-h-[72px]'>
         {description}
       </p>
     </div>
