@@ -20,7 +20,9 @@
 - [x] No buttons en projects, ir directo a deployed site
 - [ ] Icono rxjs no se ve en mobile
 - [x] Text balance al header
-- [ ] tootlip en el icons grid
+- [x] tootlip en el icons grid
 - [x] cambiar readme
 - [] meter foto en linkedin
 - [] referencia al portfolio en linkeding y CV
+- [] icons de projects sin padding bottom en IPHONE SE
+- [] Quitar esrellas en projects en mobile

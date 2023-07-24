@@ -5,8 +5,8 @@ import Stars from './Stars.astro';
 ---
 
 <section
-  id="about"
-  class='relative overflow-hidden flex items-start justify-center h-full xl:h-screen  flex-col xl:flex-row xl:items-center  px-8 py-24 sm:px-16 lg:px-28 lg:py-52 min-[1680px]:px-80'
+  id='about'
+  class='relative overflow-hidden flex items-start justify-center h-full xl:h-screen flex-col xl:flex-row xl:items-center px-8 py-24 sm:px-16 lg:px-28 lg:py-52 min-[1680px]:px-80'
 >
   <div
     class='ElementToAnimate left_about_tech flex-col justify-between grow h-full hidden xl:flex'
@@ -23,12 +23,19 @@ import Stars from './Stars.astro';
         On my way to learn by doing.
       </h4>
     </div>
-    <div class='bot_technologies'>
-      <h4 class='font-quattrocento text-4xl text-gray-400 mb-14'>Technologies</h4>
+    <div
+      id='icons-grid'
+      class='ElementToAnimate bot_technologies w-full text-center xl:text-start'
+    >
+      <h4 class='font-quattrocento text-4xl text-gray-400 mb-14'>
+        Technologies
+      </h4>
       <IconsGrid />
     </div>
   </div>
-  <div class='ElementToAnimate top_about flex flex-col w-full items-center text-center xl:hidden'>
+  <div
+    class='ElementToAnimate top_about flex flex-col w-full items-center text-center xl:hidden'
+  >
     <h5
       class='font-quattrocento text-3xl mb-4 text-bg-gradient-orange_rose text-balance'
     >
@@ -40,70 +47,87 @@ import Stars from './Stars.astro';
       On my way to learn by doing.
     </h4>
   </div>
-  <div class='ElementToAnimate right_experience basis-1/3 mb-20 xl:mb-0 '>
-    <h4 class='font-quattrocento text-4xl md:text-4xl text-gray-400 mb-14 max-xl:text-center'>Experience</h4>
+  <div
+    id='last-container'
+    class='ElementToAnimate right_experience basis-1/3 mb-20 xl:mb-0'
+  >
+    <h4
+      class='font-quattrocento text-4xl md:text-4xl text-gray-400 mb-14 max-xl:text-center'
+    >
+      Experience
+    </h4>
 
     <Timeline />
   </div>
-  <div class='ElementToAnimate bot_technologies xl:hidden w-full text-center'>
-    <h4 class='font-quattrocento text-4xl text-gray-400 mb-14'>Technologies</h4>
-    <IconsGrid />
-  </div>
-  <Stars/>
+
+  <Stars />
 </section>
 
 <style>
-  .text-balance{
+  .text-balance {
     text-wrap: balance;
   }
 
   @keyframes fadeInUp {
-  0% {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .ElementToAnimate {
     opacity: 0;
-    transform: translateY(20px);
   }
-  100% {
+  .fadeInUp {
+    animation: fadeInUp 1s ease-in-out;
     opacity: 1;
-    transform: translateY(0);
   }
-}
-/* .grid {
-  animation: fadeInUp 1s ease-in-out;
-} */
-
-.ElementToAnimate {
-  opacity: 0;
-}
-.fadeInUp {
-  animation: fadeInUp 1s ease-in-out;
-  opacity: 1;
-}
 </style>
-
 
 <script>
   const elementsToAnimate = document.querySelectorAll('.ElementToAnimate');
+  const iconsGrid = document.querySelector('#icons-grid');
+  const lastContainer = document.querySelector('#last-container');
 
+  const isSmallScreen = window.innerWidth < 1280;
 
-const fadeInUpOptions = {
-  threshold: 0.2, // Adjust this threshold value to suit your needs
-};
+  // This change the position on the layout of the icons grid depending on the device resolution.
+  // The former method was to do a conditional rendering on to elements
+  // based on media queries and setting one or the other to display: none. 
+  // The main issue with that solution is that the display:none nested in some way to the inner svgs
+  // and it removed some of the inner paths making them not visible.
 
-function fadeInUpAnimation(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fadeInUp'); 
-      observer.unobserve(entry.target); 
-    }
+  if (isSmallScreen) {
+    insertAfter(iconsGrid, lastContainer);
+  }
+
+  function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+
+  const fadeInUpOptions = {
+    threshold: 0.2, 
+  };
+
+  function fadeInUpAnimation(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fadeInUp');
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  const fadeInUpObserver = new IntersectionObserver(
+    fadeInUpAnimation,
+    fadeInUpOptions
+  );
+
+  elementsToAnimate.forEach((card) => {
+    fadeInUpObserver.observe(card);
   });
-}
-
-const fadeInUpObserver = new IntersectionObserver(fadeInUpAnimation, fadeInUpOptions);
-
-elementsToAnimate.forEach(card => {
-  fadeInUpObserver.observe(card);
-});
-
 </script>
-
-
