@@ -9,6 +9,7 @@ import ReduxIcon from '../icons/ReduxIcon.astro';
 import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
 import ProjectCard from './ProjectCard.astro';
 import Stars from './Stars.astro';
+import NodeIcon from '../icons/NodeIcon.astro';
 ---
 
 <section
@@ -72,6 +73,24 @@ import Stars from './Stars.astro';
     </ProjectCard>
 
     <ProjectCard
+    title='One Piece Tripulation'
+    description='App that display and filter crews from One Piece fethcing data from a Node.js API.'
+    img='images/one_piece.png'
+    siteLink='https://onepiece-eastblue-crews.vercel.app/'
+    githubLink='https://github.com/AitorGallardo/onepiece_eastblue_crews'
+  >
+    <Fragment slot='tech_icons'>
+      <HtmlIcon width='22' height='22' />
+      <CssIcon width='22' height='22' />
+      <JavaScriptIcon width='22' height='22' />
+      <ReactIcon width='22' height='22' />
+      <ReduxIcon width='22' height='22' />
+      <NodeIcon width='22' height='22' />
+    </Fragment>
+  </ProjectCard>
+
+
+    <ProjectCard
       title='Tip Calculator'
       description='App that splits bills and calculate tips.'
       img='images/tip-calculator.png'
@@ -83,22 +102,6 @@ import Stars from './Stars.astro';
         <CssIcon width='22' height='22' />
         <JavaScriptIcon width='22' height='22' />
         <ReactIcon width='22' height='22' />
-      </Fragment>
-    </ProjectCard>
-
-    <ProjectCard
-      title='One Piece Tripulation'
-      description='App that display and filter crews from One Piece.'
-      img='images/one_piece.png'
-      siteLink='https://onepiece-eastblue-crews.vercel.app/'
-      githubLink='https://github.com/AitorGallardo/onepiece_eastblue_crews'
-    >
-      <Fragment slot='tech_icons'>
-        <HtmlIcon width='22' height='22' />
-        <CssIcon width='22' height='22' />
-        <JavaScriptIcon width='22' height='22' />
-        <ReactIcon width='22' height='22' />
-        <ReduxIcon width='22' height='22' />
       </Fragment>
     </ProjectCard>
 
