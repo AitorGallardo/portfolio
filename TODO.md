@@ -18,7 +18,7 @@
 - [x] Dejar posicionado el hover con estrellas, no ensenyar en partes mobile
 - [x] Deshabilitar movimiento de imagen en mobil
 - [x] No buttons en projects, ir directo a deployed site
-- [ ] Icono rxjs no se ve en mobile
+- [x] Icono rxjs no se ve en mobile
 - [x] Text balance al header
 - [x] tootlip en el icons grid
 - [x] cambiar readme
