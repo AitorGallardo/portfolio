@@ -4,4 +4,4 @@
 
 #### Deployed using [gh-pages](https://www.npmjs.com/package/gh-pages).
 
-##### Had to rename /\_astro for /styles and its ref to the file in index.html in /dist in order to correcly deploy the site on Github Pages.
+##### Had to rename /\_astro for /styles and its ref to the file in /dist > index.html > "./stles" in in order to correcly deploy the site on Github Pages.
